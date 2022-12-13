@@ -1,0 +1,61 @@
+.inputs
+{
+    width: 80%;
+    margin-left: 10%;
+    height: 5vh;
+    margin-top: 3vh;
+    border-radius: 1vh;
+    border: none;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: black;
+    font-size: 120%;
+    font-weight: bold;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: black;
+    font-size: 120%;
+    font-weight: bold;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: black;
+    font-size: 120%;
+    font-weight: bold;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: black;
+    font-size: 120%;
+    font-weight: bold;
+  }
+
+  .inputs:focus
+  {
+    border-color: black;
+    background-color: #FFBF00;
+   
+  }
+  .button
+{
+    background-color: #FFBF00;
+    width: 20%;
+    height: 7vh;
+    border-radius: 2vh;
+    margin-left: 40%;
+    font-size: 2vh;
+    border: none;
+    margin-top: 5vh;
+
+}
+.span
+{
+  display: ruby-base;
+  margin-top: 2vh;
+  margin-left: 10%;
+  font-weight: bold;
+  color: #540375;
+  font-size: 2vh;
+}
+.hidde
+{
+  display: none;
+}

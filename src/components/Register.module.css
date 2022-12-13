@@ -1,0 +1,25 @@
+.center_text
+{
+    text-align: center;
+}
+.background_color
+{
+    background-color: #540375;
+}
+.text_color
+{
+    color: #FFBF00;
+}
+.card
+{
+    background-color: #10A19D;
+    width: 50%;
+    height: 80vh;
+    margin-left: 25%;
+    margin-top: 10vh;
+    border-radius: 5%;
+}
+.heading
+{
+    margin-top: 2%;
+}
