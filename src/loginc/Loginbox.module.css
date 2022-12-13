@@ -13,7 +13,11 @@
 }
 .heading
 {
-    margin-top: 2%;
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 5vh;
+    font-weight: 700;
+    color: #ffff;
 }
 .inputs
 {
@@ -61,6 +65,7 @@
     font-size: 2vh;
     border: none;
     margin-top: 5vh;
+    margin-bottom: 2vh;
 
 }
 .span
@@ -75,4 +80,12 @@
 .hidde
 {
   display: none;
+}
+.links
+{
+  color: #fff;
+  font-size: 2vh;
+  margin-left: 44%;
+  font-size: 2vh;
+  font-weight: bolder;
 }

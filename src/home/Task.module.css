@@ -1,0 +1,17 @@
+.taskbox
+{
+    width: 96%;
+    margin-left: 2%;
+    border: none;
+    border-radius: 1vw;
+    margin-top: 5vh;
+    background-color:#10A19D ;
+}
+.heading
+{
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 5vh;
+    font-weight: 700;
+    color: #ffff;
+}

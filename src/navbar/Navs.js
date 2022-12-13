@@ -9,7 +9,7 @@ function Navs()
         <React.Fragment>
         <ul className={styles.ul}>
         <li className={styles.li}>
-        <Link className={styles.links} to="/">Home</Link>
+        <Link className={styles.links} to="/home">Home</Link>
         </li>
         <li className={styles.li}>
         <Link className={styles.links} to="/login">About Us</Link>

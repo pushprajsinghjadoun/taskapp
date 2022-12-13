@@ -1,0 +1,50 @@
+.inputbox
+{
+    margin-top: 5vh;
+    width: 78%;
+    background-color: #10A19D;
+    height: 14vh;
+    margin-left: 12%;
+    border-radius: 2vw;
+    
+}
+.titleinput
+{
+    margin-top: 5vh;
+    margin-left: 3vw;
+    width: 30%;
+    height: 5vh;
+    border: none;
+    border-radius: 0.5vw;
+    font-size: 2vh;
+}
+.descriptioninput
+{
+    margin-top: 5vh;
+    margin-left: 3vw;
+    width: 40%;
+    height: 5vh;
+    border: none;
+    border-radius: 0.5vw;
+    font-size: 2vh;
+
+}
+.inputbutton
+{
+    width: 10%;
+    height: 5.5vh;
+    border-radius: 2vh;
+    margin-left: 5vw;
+    background-color: #FFBF00;
+    border: none;
+    font-size: 2vh;
+
+}
+.heading
+{
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 5vh;
+    font-weight: 700;
+    color: #ffff;
+}

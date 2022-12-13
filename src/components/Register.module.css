@@ -21,5 +21,18 @@
 }
 .heading
 {
-    margin-top: 2%;
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 5vh;
+    font-weight: 700;
+    color: #ffff;
+}
+
+.links
+{
+  color: #fff;
+  font-size: 2vh;
+  margin-left: 38%;
+  font-size: 2vh;
+  font-weight: bolder;
 }
