@@ -1,8 +1,17 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import styles from './Loginbox.module.css'
-
-function LoginInput()
+import { useNavigate } from 'react-router-dom';
+function LoginInput(props)
 {
+    const navigat = useNavigate()
+    const [redir,setredir] = useState(false);
+    useEffect(()=>
+    {
+        if(redir)
+        {
+            navigat('/home')
+        }
+    },[redir])
     const [names, setName] = useState({});
 
     const myinput = [
@@ -30,7 +39,35 @@ const changehandle = (e)=>{
 const formhandler = (e)=>
 {
     e.preventDefault();
-    console.log('dfgds')
+
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(names)
+    };
+    fetch('http://localhost:5000/users/login', requestOptions)
+        .then(response => response.json())
+        .then((data)=>
+        {
+            console.log(props);
+           console.log(data.user.email)
+            localStorage.setItem('id',data.user._id);
+            localStorage.setItem('name', data.user.name);
+            localStorage.setItem('istrue',true);
+            console.log(data);
+            alert('Login Successfully')
+            console.log(localStorage.getItem('name'))
+            props.onClicks(true);
+            setredir(true);
+            
+            
+           
+        }).catch((e)=>{
+            alert('Invalid Email and Password')
+        });
+
+
+   
 }
 
     return (

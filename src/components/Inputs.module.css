@@ -60,3 +60,43 @@
 {
   display: none;
 }
+
+
+.center_text
+{
+    text-align: center;
+}
+.background_color
+{
+    background-color: #540375;
+}
+.text_color
+{
+    color: #FFBF00;
+}
+.card
+{
+    background-color: #10A19D;
+    width: 50%;
+    height: 80vh;
+    margin-left: 25%;
+    margin-top: 10vh;
+    border-radius: 5%;
+}
+.heading
+{
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 5vh;
+    font-weight: 700;
+    color: #ffff;
+}
+
+.links
+{
+  color: #fff;
+  font-size: 2vh;
+  margin-left: 38%;
+  font-size: 2vh;
+  font-weight: bolder;
+}
