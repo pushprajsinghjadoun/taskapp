@@ -49,3 +49,67 @@
     color: #ffff;
     margin-top: 10vh;
 }
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:450px) {
+    .inputbox
+{
+    margin-top: 4vh;
+    width: 95%;
+    background-color: #10A19D;
+    height: 16vh;
+    margin-left: 2.5%;
+    border-radius: 2vw;
+    
+    
+}
+.titleinput
+{
+    margin-top: 2vh;
+    margin-left: 10vw;
+    width: 80%;
+    height: 3vh;
+    border: none;
+    border-radius: 0.5vw;
+    font-size: 1.5vh;
+}
+.descriptioninput
+{
+    margin-top: 2vh;
+    margin-left: 10vw;
+    width: 80%;
+    height: 3vh;
+    border: none;
+    border-radius: 0.5vw;
+    font-size: 1.5vh;
+
+}
+.inputbutton
+{
+    margin-top: 2vh;
+    width: 25%;
+    height: 3vh;
+    border-radius: 2vh;
+    margin-left: 35vw;
+    background-color: #FFBF00;
+    border: none;
+    font-size: 2vh;
+
+}
+.heading
+{
+    text-align: center;
+    margin-top: 6vh;
+    font-size: 4vh;
+    font-weight: 700;
+    color: #ffff;
+    margin-top: 10vh;
+}
+  }

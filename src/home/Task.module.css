@@ -63,3 +63,36 @@
     padding-top: 0.5vh;
     padding-bottom: 0.5vh;
 }
+
+@media only screen and (max-width:450px) {
+.heading
+{
+    margin-top: 5vh;
+    font-size: 3vh;
+}
+.table
+{
+    width: 98%;
+    margin-left: 1%;
+}
+.thead
+{
+    font-weight: 700;
+    font-size: 2vh;
+}
+
+.td{
+    text-align: center;
+    font-size: 1.5vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+.sbutton
+{
+    width: 60%;
+    height: 50%;
+    font-size: 1.5vh;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}
+  }

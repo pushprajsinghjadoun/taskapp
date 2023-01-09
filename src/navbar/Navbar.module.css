@@ -6,7 +6,7 @@
   overflow: hidden;
   background-color: #333;
   position: fixed;
-  top: 0;
+  top: 0%;
   width: 100%;
   padding-left: 36%;
 }
@@ -26,4 +26,30 @@
 .li:hover
 {
     background-color: #111;
+}
+
+
+@media only screen and (max-width:450px) {
+  .ul
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0.2%;
+  width: 100%;
+  padding-left: 2%;
+}
+.links
+{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1.8vh 1.5vw;
+  text-decoration: none;
+  font-size: 1.8vh;
+}
+
 }
