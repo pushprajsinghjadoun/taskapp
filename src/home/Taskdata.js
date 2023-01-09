@@ -10,7 +10,7 @@ function Taskdata(props)
     const usersid = localStorage.getItem('id');
     console.log(usersid);
     console.log("above is correct")
-    fetch("http://localhost:5000/gettaskdata/"+usersid)
+    fetch("https://taskappbackend.vercel.app/gettaskdata/"+usersid)
 
       .then(response => {
 
@@ -31,7 +31,7 @@ function Taskdata(props)
   },[props.triger,del])
 
   const handledelete = async (userid) =>{
-    fetch('http://localhost:5000/deletetask/'+userid, { method: 'DELETE' })
+    fetch('https://taskappbackend.vercel.app/deletetask/'+userid, { method: 'DELETE' })
         .then(() => {
           if(del==true)
           {
@@ -40,7 +40,10 @@ function Taskdata(props)
           {
             setdel(true);
           }
-        });
+        }).catch((e)=>{
+          console.log("Somethings went wrong" + e);
+        }); 
+        
   }
 
    return  (

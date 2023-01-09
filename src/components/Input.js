@@ -65,7 +65,7 @@ const formhandler = (e)=>
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(names)
         };
-        fetch('http://localhost:5000/registeruser', requestOptions)
+        fetch('https://taskappbackend.vercel.app/registeruser', requestOptions)
             .then(response => response.json())
             .then((data)=>
             {

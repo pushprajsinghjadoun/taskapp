@@ -28,7 +28,7 @@ function Home()
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(names)
         };
-        fetch('http://localhost:5000/taskdata', requestOptions)
+        fetch('https://taskappbackend.vercel.app/taskdata', requestOptions)
             .then(response => response.json())
             .then((data)=>
             {

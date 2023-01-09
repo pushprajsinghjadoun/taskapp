@@ -12,10 +12,8 @@ function Navs(props)
     const [redirr,setRedirr] = useState(false)
     useEffect(()=>
     {
-        console.log('gkfjgfgfgf')
         if(redirr)
         {
-            console.log("fdjdkgjfkglfjgfklmhjvhjnmh")
             navigat('/register')
         }
     },[redirr])
