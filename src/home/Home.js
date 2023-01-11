@@ -1,9 +1,12 @@
 import React, {useState} from 'react'
 import styles from './Home.module.css'
 import Taskdata from './Taskdata';
+import HashLoader from "react-spinners/HashLoader";
+
 function Home()
 {
     const [names, setName] = useState({});
+    const [load,setloading] = useState(false);
     const [triger,settriger] = useState(false);
    
     const changehandle = (e)=>{
@@ -15,7 +18,10 @@ function Home()
         const userval = "userid"
         setName(values=>({...values, [userval]: userid}))
         console.log(names);
+    
     }
+
+
 
     let checkval = localStorage.getItem('istrue');
     const formhandle = (e)=>{
@@ -23,6 +29,7 @@ function Home()
         document.getElementById("input").value = '';
         document.getElementById("inputt").value = '';
         console.log(names);
+        setloading(true);
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -32,6 +39,7 @@ function Home()
             .then(response => response.json())
             .then((data)=>
             {
+                setloading(false);
                 console.log(data);
                 if(triger==true)
                 {
@@ -43,6 +51,7 @@ function Home()
                 console.log(triger);
                 
             }).catch((e)=>{
+                setloading(false);
                 alert(e)
             });
 
@@ -58,9 +67,10 @@ function Home()
             <input type={'text'} id="input" name='title'  placeholder='Title' onChange={changehandle} className={styles.titleinput} autoComplete="off" required></input>
             <input type={'text'} id="inputt" name='description'  placeholder='Description' onChange={changehandle} className={styles.descriptioninput} autoComplete="off"  required></input>
             <button type={'submit'} className={styles.inputbutton}>Add Task</button>
+            
             </form>
             </div>
-            <Taskdata triger={triger} />
+            <Taskdata triger={triger} load = {load} />
             </React.Fragment>
             :
             <React.Fragment>

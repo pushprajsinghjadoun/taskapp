@@ -90,7 +90,19 @@
   font-weight: bolder;
 }
 
+.modalhidden
+{
+  display: block;
+}
 
+.loader
+{
+  margin-left: 46%;
+}
+.fdf
+{
+  display: none;
+}
 
 
 

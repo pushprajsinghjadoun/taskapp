@@ -59,6 +59,8 @@ function Input(props)
 const formhandler = (e)=>
 {
     e.preventDefault()
+    
+    
     if(!namebool&& !emailbool && !phonebool && !passwordbool)
     {
         setloading(true);
@@ -97,7 +99,6 @@ const formhandler = (e)=>
 }
 
 const changehandle = (e)=>{
-    
     const name = e.target.name;
     const value = e.target.value;
 
@@ -159,6 +160,11 @@ const changehandle = (e)=>{
 
 return (
     <React.Fragment>
+    
+    <div className={loading ? styles.modalhidden : styles.fdf}>
+    
+    <p className={styles.loader}><HashLoader color="#540375" /></p>
+    </div>
     <form >
     {
         myinput.map((item,index)=>{
@@ -172,6 +178,7 @@ return (
     }
     <button type={'submit'} onClick={formhandler} className={styles.button}>Submit</button>
     </form>
+
     </React.Fragment>
 );
 }

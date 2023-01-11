@@ -4,6 +4,7 @@ import GridLoader from "react-spinners/GridLoader";
 import HashLoader from "react-spinners/HashLoader";
 
 function Taskdata(props) {
+  console.log(props)
   const [loading, setloading] = useState(false);
   const [users, setUsers] = useState([]);
   const [del, setdel] = useState(true);
@@ -85,7 +86,7 @@ function Taskdata(props) {
         </table>
         <br></br>
       </div>
-      <p className={loading? styles.loader : styles.hide}><HashLoader color="#540375" /></p>
+      <p className={loading || props.load ? styles.loader : styles.hide}><HashLoader color="#540375" /></p>
     </div>
   );
 }
