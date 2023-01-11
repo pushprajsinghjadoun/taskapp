@@ -2,9 +2,11 @@ import React, {useState,useEffect } from 'react'
 import styles from './Inputs.module.css'
 import validator from 'validator'
 import { useNavigate } from 'react-router-dom'
+import GridLoader from "react-spinners/GridLoader";
 function Input(props)
 {
-    
+    const [loading,setloading] = useState(false);
+
     const navigat = useNavigate()
     const [redir,setredir] = useState(false)
     useEffect(()=>
@@ -59,7 +61,7 @@ const formhandler = (e)=>
     e.preventDefault()
     if(!namebool&& !emailbool && !phonebool && !passwordbool)
     {
-        console.log(names);
+        setloading(true);
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -69,8 +71,7 @@ const formhandler = (e)=>
             .then(response => response.json())
             .then((data)=>
             {
-                console.log(props);
-                console.log(data.user._id)
+                setloading(false);
                 localStorage.setItem('id',data.user._id);
                 localStorage.setItem('name', data.user.name);
                 localStorage.setItem('istrue',true);
@@ -83,11 +84,14 @@ const formhandler = (e)=>
                 
                
             }).catch((e)=>{
+                setloading(false);
                 alert("Something Went Wrong...", e)
             });
     }else
     {
-        alert('Enter Correct Value')
+        setloading(false);
+        alert('Enter Correct Value');
+        
     }
     
 }

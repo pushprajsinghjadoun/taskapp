@@ -11,10 +11,20 @@
     />
     
     <title> Task App</title>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     
   </body>
+  <script>
+   if ("serviceWorker" in navigator) {
+    
+    console.warn("sds  fgf");
+    navigator.serviceWorker.register("/sw.js")
+        .then(e => console.warn("Service worker registered", e))
+        .catch(e => console.log("service worker failed", e));
+}
+  </script>
 </html>
