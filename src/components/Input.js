@@ -2,7 +2,7 @@ import React, {useState,useEffect } from 'react'
 import styles from './Inputs.module.css'
 import validator from 'validator'
 import { useNavigate } from 'react-router-dom'
-import GridLoader from "react-spinners/GridLoader";
+import HashLoader from "react-spinners/HashLoader";
 function Input(props)
 {
     const [loading,setloading] = useState(false);
